@@ -1,0 +1,42 @@
+{
+  "name": "sveltekit",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "lint": "prettier --plugin-search-dir . --check . && eslint .",
+    "format": "prettier --plugin-search-dir . --write ."
+  },
+  "devDependencies": {
+    "@iconify/json": "2.2.122",
+    "@sveltejs/adapter-static": "^2.0.3",
+    "@sveltejs/kit": "1.22.4",
+    "@typescript-eslint/eslint-plugin": "^6.3.0",
+    "@typescript-eslint/parser": "^6.3.0",
+    "@unocss/extractor-svelte": "^0.57.1",
+    "@unocss/preset-mini": "^0.57.1",
+    "@unocss/reset": "^0.57.1",
+    "eslint": "^8.46.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-svelte": "^2.32.4",
+    "prettier": "^2.8.0",
+    "prettier-plugin-svelte": "^2.10.1",
+    "svelte": "^4.1.2",
+    "svelte-check": "^3.4.6",
+    "tslib": "^2.6.1",
+    "typescript": "^5.1.6",
+    "unocss": "0.57.1",
+    "vite": "^4.4.9"
+  },
+  "dependencies": {
+    "bits-ui": "^0.6.3",
+    "clsx": "^2.0.0",
+    "tailwind-merge": "^1.14.0",
+    "tailwind-variants": "^0.1.16"
+  }
+}
