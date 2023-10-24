@@ -21,6 +21,8 @@
     on:click
   >
     <slot />
-    <div class="i-chevron-down h-4 w-4 transition-transform duration-200" />
+    <div
+      class="i-lucide-chevron-down h-4 w-4 transition-transform duration-200"
+    />
   </AccordionPrimitive.Trigger>
 </AccordionPrimitive.Header>
