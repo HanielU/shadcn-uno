@@ -101,13 +101,6 @@ export const shadcnPreset: Preset = {
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 85.7% 97.3%;
     --ring: 240 3.7% 15.9%;}
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-    font-feature-settings: "rlig" 1, "calt" 1;
-  }
   `,
     },
   ],
