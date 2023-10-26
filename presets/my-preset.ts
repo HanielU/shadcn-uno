@@ -11,9 +11,9 @@ export const myPreset: Preset = {
     [
       // flex-s stands for flex-shortcut
       // to avoid mixups with default flex utilities like flex-wrap
-      /^flex-s-(start|center|between|evenly|around|end)(-(start|center|baseline|end))?$/,
-      ([, justify, align]) =>
-        `flex justify-${justify} items${align || "-center"}`,
+      /^(inline-)?flex-s-(start|center|between|evenly|around|end)(-(start|center|baseline|end))?$/,
+      ([, inline, justify, align]) =>
+        `${inline || ''}flex justify-${justify} items${align || "-center"}`,
       { layer: "default" },
     ],
     // use when width and height values are the same
