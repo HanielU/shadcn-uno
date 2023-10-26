@@ -13,11 +13,11 @@ export const myPreset: Preset = {
       // to avoid mixups with default flex utilities like flex-wrap
       /^(inline-)?flex-s-(start|center|between|evenly|around|end)(-(start|center|baseline|end))?$/,
       ([, inline, justify, align]) =>
-        `${inline || ''}flex justify-${justify} items${align || "-center"}`,
+        `${inline || ""}flex justify-${justify} items${align || "-center"}`,
       { layer: "default" },
     ],
     // use when width and height values are the same
-    [/^square-(.*)$/, ([, v]) => `h-${v} w-${v}`, { layer: "utilities" }],
+    [/^s-(.*)$/, ([, v]) => `h-${v} w-${v}`, { layer: "utilities" }],
     [
       /^br(-\w+(-\w+)*)?$/, // h - hyphen | v - value
       ([, hAndV]) => {
