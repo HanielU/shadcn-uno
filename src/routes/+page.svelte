@@ -2,7 +2,7 @@
   import * as Accordion from "$lib/components/ui/accordion";
 </script>
 
-<Accordion.Root class="w-full sm:max-w-[70%]">
+<Accordion.Root class="w-full sm:max-w-70%">
   <Accordion.Item value="item-1">
     <Accordion.Trigger>Is it accessible?</Accordion.Trigger>
     <Accordion.Content>
