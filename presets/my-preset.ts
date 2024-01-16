@@ -36,36 +36,28 @@ export const myPreset: Preset = {
       name: "arbitrary-media-query",
       match(matcher, { theme }) {
         // prefix with @ to specify that it's a media query
-        const minVariant = variantGetParameter("@min-", matcher, [":", "-"]);
-        const maxVariant = variantGetParameter("@max-", matcher, [":", "-"]);
-        const minHeightVariant = variantGetParameter("@min-h-", matcher, [
+        const minVariant = variantGetParameter("min-", matcher, [":", "-"]);
+        const maxVariant = variantGetParameter("max-", matcher, [":", "-"]);
+        const minHeightVariant = variantGetParameter("min-h-", matcher, [
           ":",
           "-",
         ]);
-        const maxHeightVariant = variantGetParameter("@max-h-", matcher, [
+        const maxHeightVariant = variantGetParameter("max-h-", matcher, [
           ":",
           "-",
         ]);
 
         // the order that we check the variants is important
         // because we want to match the most specific one
-        const matched =
-          (minHeightVariant && {
-            type: "min-h",
-            variant: minHeightVariant,
-          }) ||
-          (maxHeightVariant && {
-            type: "max-h",
-            variant: maxHeightVariant,
-          }) ||
-          (minVariant && {
-            type: "min",
-            variant: minVariant,
-          }) ||
-          (maxVariant && {
-            type: "max",
-            variant: maxVariant,
-          });
+        const matched = minHeightVariant
+          ? { type: "min-h", variant: minHeightVariant }
+          : maxHeightVariant
+            ? { type: "max-h", variant: maxHeightVariant }
+            : minVariant
+              ? { type: "min", variant: minVariant }
+              : maxVariant
+                ? { type: "max", variant: maxVariant }
+                : null;
 
         if (matched?.variant) {
           const [match, rest] = matched.variant;
