@@ -30,9 +30,9 @@ export const myPreset: Preset = {
 
   variants: [
     {
-      // adds support for "@min-[width]:class" and "@min-h-[width]:class"
+      // adds support for "min-[width]:class" and "min-h-[width]:class"
       // or
-      // "@min-width:class" and "@min-h-width:class"
+      // "min-width:class" and "min-h-width:class"
       name: "arbitrary-media-query",
       match(matcher, { theme }) {
         // prefix with @ to specify that it's a media query
